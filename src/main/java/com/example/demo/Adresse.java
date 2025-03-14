@@ -14,8 +14,7 @@ public class Adresse implements Serializable {
     private String state;
     private String street;
     private String city;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_id")
+   @OneToOne(mappedBy = "adresse",cascade = CascadeType.ALL)
     private Student student;
 
 
