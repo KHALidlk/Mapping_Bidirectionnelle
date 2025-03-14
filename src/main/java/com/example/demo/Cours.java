@@ -10,7 +10,7 @@ public class Cours {
     private int cours_id;
     @Column(nullable=false)
     private String nom;
-     @ManyToOne
+     @ManyToOne(mappedBy = "cours")
      @JoinColumn(name="student_id")
      private Student student;
 
